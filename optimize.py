@@ -130,6 +130,7 @@ def diversify_ligands(model, pocket, mols, timesteps,
     # Build mol objects
     x = out_lig[:, :model.x_dims].detach().cpu()
     atom_type = out_lig[:, model.x_dims:].argmax(1).detach().cpu()
+    lig_mask = lig_mask.detach().cpu()
 
     molecules = []
     for mol_pc in zip(utils.batch_to_list(x, lig_mask),
