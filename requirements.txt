@@ -1,0 +1,43 @@
+# Requirements generated from environment.yaml
+# Note: Some packages may need to be installed via conda due to CUDA dependencies
+
+# Core Python packages
+numpy==1.26.4
+scipy==1.13.1
+pandas==2.2.2
+networkx==3.3
+tqdm==4.66.5
+imageio==2.21.2
+seaborn==0.13.2
+PyYAML==0.2.5
+protobuf==3.20.*
+
+# PyTorch ecosystem
+# Install PyTorch with CUDA 11.8 support
+--index-url https://download.pytorch.org/whl/cu118
+torch==2.0.1
+torchvision
+torchaudio
+pytorch-lightning==1.8.4
+torchmetrics==1.4.2
+# Install torch-scatter with CUDA support
+--find-links https://data.pyg.org/whl/torch-2.0.0+cu118.html
+torch-scatter==2.1.2
+
+# Chemistry and bioinformatics
+rdkit==2022.03.2
+biopython==1.79
+openbabel==3.1.1
+
+# Experiment tracking
+wandb==0.13.1
+
+# Installation Notes:
+# 
+# This requirements.txt includes CUDA support for PyTorch and torch-scatter
+# Just run: pip install -r requirements.txt
+#
+# Prerequisites:
+# - NVIDIA GPU drivers installed on your system
+#
+# CUDA Runtime: PyTorch pip wheels include CUDA runtime, so cudatoolkit is not needed
