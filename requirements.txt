@@ -2,7 +2,7 @@
 # Note: Some packages may need to be installed via conda due to CUDA dependencies
 
 # Core Python packages
-numpy==1.26.4
+numpy>=1.26.3
 scipy==1.13.1
 pandas==2.2.2
 networkx==3.3
